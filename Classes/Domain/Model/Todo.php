@@ -1,10 +1,13 @@
 <?php
 
+namespace BusyNoggin\Todos\Domain\Model;
+
+
 /**
  * A Todo
  *
  */
-class Tx_BusynogginTodos_Domain_Model_Todo extends Tx_Extbase_DomainObject_AbstractEntity {
+class Todo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * Item description

@@ -1,19 +1,28 @@
-plugin.tx_busynoggintodos {
+plugin.tx_todos {
 	view {
-		templateRootPath = {$plugin.tx_busynoggintodos.view.templateRootPath}
-		partialRootPath = {$plugin.tx_busynoggintodos.view.partialRootPath}
-		layoutRootPath = {$plugin.tx_busynoggintodos.view.layoutRootPath}
+		templateRootPath = {$plugin.tx_todos.view.templateRootPath}
+		partialRootPath = {$plugin.tx_todos.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_todos.view.layoutRootPath}
 	}
 	persistence {
-		storagePid = {$plugin.tx_busynoggintodos.persistence.storagePid}
+		storagePid = {$plugin.tx_todos.persistence.storagePid}
+
+		classes {
+			BusyNoggin\Todos\Domain\Model\Todo {
+				mapping {
+					tableName = tx_todos_domain_model_todo
+				}
+			}
+		}
 	}
+
 	features {
 		# uncomment the following line to enable the new Property Mapper.
-		# rewrittenPropertyMapper = 1
+		rewrittenPropertyMapper = 1
 	}
 }
 
-plugin.tx_busynoggintodos._CSS_DEFAULT_STYLE (
+plugin.tx_todos._CSS_DEFAULT_STYLE (
 	input.f3-form-error {
 		background-color:#FF9F9F;
 		border: 1px #FF0000 solid;

@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_busynoggintodos_domain_model_todo'
+# Table structure for table 'tx_todos_domain_model_todo'
 #
-CREATE TABLE tx_busynoggintodos_domain_model_todo (
+CREATE TABLE tx_todos_domain_model_todo (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,

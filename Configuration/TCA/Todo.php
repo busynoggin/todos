@@ -3,8 +3,8 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_busynoggintodos_domain_model_todo'] = array(
-	'ctrl' => $TCA['tx_busynoggintodos_domain_model_todo']['ctrl'],
+$TCA['tx_todos_domain_model_todo'] = array(
+	'ctrl' => $TCA['tx_todos_domain_model_todo']['ctrl'],
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, description, done',
 	),
@@ -37,8 +37,8 @@ $TCA['tx_busynoggintodos_domain_model_todo'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_busynoggintodos_domain_model_todo',
-				'foreign_table_where' => 'AND tx_busynoggintodos_domain_model_todo.pid=###CURRENT_PID### AND tx_busynoggintodos_domain_model_todo.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_todos_domain_model_todo',
+				'foreign_table_where' => 'AND tx_todos_domain_model_todo.pid=###CURRENT_PID### AND tx_todos_domain_model_todo.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -95,7 +95,7 @@ $TCA['tx_busynoggintodos_domain_model_todo'] = array(
 		),
 		'description' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:busynoggin_todos/Resources/Private/Language/locallang_db.xlf:tx_busynoggintodos_domain_model_todo.description',
+			'label' => 'LLL:EXT:todos/Resources/Private/Language/locallang_db.xlf:tx_todos_domain_model_todo.description',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -104,7 +104,7 @@ $TCA['tx_busynoggintodos_domain_model_todo'] = array(
 		),
 		'done' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:busynoggin_todos/Resources/Private/Language/locallang_db.xlf:tx_busynoggintodos_domain_model_todo.done',
+			'label' => 'LLL:EXT:todos/Resources/Private/Language/locallang_db.xlf:tx_todos_domain_model_todo.done',
 			'config' => array(
 				'type' => 'check',
 				'default' => 0

@@ -3,25 +3,25 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-Tx_Extbase_Utility_Extension::registerPlugin(
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 	$_EXTKEY,
 	'List',
 	'Todo List'
 );
 
-t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Todos');
+\TYPO3\CMS\Core\Extension\ExtensionManager::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Todos');
 
-t3lib_extMgm::addLLrefForTCAdescr('tx_busynoggintodos_domain_model_todo', 'EXT:busynoggin_todos/Resources/Private/Language/locallang_csh_tx_busynoggintodos_domain_model_todo.xlf');
-t3lib_extMgm::allowTableOnStandardPages('tx_busynoggintodos_domain_model_todo');
-$TCA['tx_busynoggintodos_domain_model_todo'] = array(
+\TYPO3\CMS\Core\Extension\ExtensionManager::addLLrefForTCAdescr('tx_todos_domain_model_todo', 'EXT:todos/Resources/Private/Language/locallang_csh_tx_todos_domain_model_todo.xlf');
+\TYPO3\CMS\Core\Extension\ExtensionManager::allowTableOnStandardPages('tx_todos_domain_model_todo');
+$TCA['tx_todos_domain_model_todo'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:busynoggin_todos/Resources/Private/Language/locallang_db.xlf:tx_busynoggintodos_domain_model_todo',
+		'title'	=> 'LLL:EXT:todos/Resources/Private/Language/locallang_db.xlf:tx_todos_domain_model_todo',
 		'label' => 'description',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
 		'dividers2tabs' => TRUE,
-					'versioningWS' => 2,
+		'versioningWS' => 2,
 		'versioning_followPages' => TRUE,
 		'origUid' => 't3_origuid',
 		'languageField' => 'sys_language_uid',
@@ -33,8 +33,8 @@ $TCA['tx_busynoggintodos_domain_model_todo'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Todo.php',
-		'iconfile' => t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_busynoggintodos_domain_model_todo.gif'
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Configuration/TCA/Todo.php',
+		'iconfile' => \TYPO3\CMS\Core\Extension\ExtensionManager::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_todos_domain_model_todo.gif'
 	),
 );
 

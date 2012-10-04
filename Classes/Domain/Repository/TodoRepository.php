@@ -1,10 +1,12 @@
 <?php
+namespace BusyNoggin\Todos\Domain\Repository;
+
 
 /**
  * A repository for Todos
  *
  */
-class Tx_BusynogginTodos_Domain_Repository_TodoRepository extends Tx_Extbase_Persistence_Repository {
+class TodoRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 }
 ?>

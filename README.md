@@ -1,4 +1,4 @@
-busynoggin_todos
+todos
 ================
 
-Demo todo-list extension from T3CON12CA. Based on Extbase
+Demo todo-list extension from T3CON12. Based on Extbase
